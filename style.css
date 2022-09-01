@@ -1,0 +1,302 @@
+h1 {
+    text-align: center;
+    color: darkblue;
+    text-shadow: 4px 4px 5px orange
+}
+
+.headerFive {
+    color: rgb(0, 195, 255);
+}
+
+#italic {
+    color: cornflowerblue;
+}
+
+nav {
+    background: aquamarine;
+    text-align: center;
+}
+
+.nav-wrapper {
+    background-color: cornflowerblue;
+}
+
+/* this is targeting the link tag "a" */
+a {
+    text-decoration-line: none;
+}
+
+/* this is targetting the unordered list inside the nav */
+nav ul {
+    list-style: none;
+}
+
+/* this is targeting the list items */
+nav li {
+    display: inline-block;
+    padding: 15px;
+}
+
+.container {
+    border: 10px dashed palevioletred;
+    /* top-right-bottom-left */
+    margin: 50px 5px 25px 0px;
+    /*outside*/
+    /* margin-bottom: (insert px size here) */
+    padding: 30px 5px 15px 10px;
+    /*inside*/
+}
+
+.box {
+    height: 200px;
+    width: 200px;
+    background: rgb(18, 137, 188);
+    margin: 10px;
+    /*box-shadow: 10px 10px 30px 40px rgb(62, 62, 62) inset;*/
+}
+
+@keyframes imFaded {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#box1 {
+    animation-name: imFaded;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes imRotated {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    50% {
+        transform: rotate(180deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+#box2 {
+    animation-name: imRotated;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    border-radius: 5%;
+    background-image: radial-gradient(circle, orange, navy);
+}
+
+@keyframes imBigger {
+    0% {
+        transform: scale(1)
+    }
+
+    33% {
+        transform: scale(2)
+    }
+
+    66% {
+        transform: scale(.5)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
+
+#box3 {
+    animation: imBigger 4s infinite ease-in-out;
+    border-radius: 50%;
+    background-color: tomato;
+}
+
+@keyframes imColored {
+    0% {
+        background-color: aqua;
+    }
+
+    33% {
+        background-color: rgb(0, 255, 72);
+    }
+
+    66% {
+        background-color: rgb(255, 179, 0);
+    }
+
+    100% {
+        background-color: aqua;
+    }
+}
+
+#box4 {
+    animation: imColored 4s infinite ease-in-out;
+}
+
+@keyframes imMoved {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        left: 100px;
+        top: 0px;
+    }
+
+    50% {
+        left: 100px;
+        top: 100px;
+    }
+
+    75% {
+        left: 0px;
+        top: 100px;
+    }
+
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+
+}
+
+#box5 {
+    position: relative;
+    animation: imMoved 4s infinite ease-in-out;
+    background-color: darkgreen;
+}
+
+#box6 {
+    top: 10px;
+    left: 20px;
+    position: relative;
+    /*fixed; <-this one is cool*/
+}
+
+html {
+    background-image: radial-gradient(green, lime, yellow);
+    /*background-image: linear-gradient(to bottom, green, blue, red);*/
+    /*background-image: url(gtaFruit.png);
+    background-repeat: no-repeat;
+    background-size: cover;*/
+}
+
+form input,
+textarea,
+button {
+    display: block;
+    margin: 50px;
+}
+
+.circleImg {
+    border-radius: 50%;
+}
+
+/* first value is horizontal, then vertical, then shadow fuzziness,(4th cvalue spreads the shadow to all sides) then color */
+img {
+    box-shadow: 10px 10px 15px 0px rgb(62, 62, 62);
+}
+
+.flex {
+    margin: 30px;
+    border: 3px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    /*the wrap makes the boxes wrap instead of being in-line*/
+    justify-content: space-around;
+    /*flex-direction: column-reverse;*/
+}
+
+.contact-field {
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+    margin: 30px;
+    padding: 10px;
+}
+
+.input-field {
+    margin: 30px;
+}
+
+/*------------------------------------ABOUT ME----------------------------------------*/
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(5, [col] 20%);
+    grid-template-rows: repeat(3, [row] auto);
+    background-color: rgb(7, 43, 133);
+    color: #444;
+}
+
+.nox {
+    background-color: rgba(5, 188, 208, 0.72);
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+    z-index: 10;
+
+}
+
+.a {
+    grid-column: col 1 / span 2;
+    grid-row: row;
+    display: flex;
+    justify-content: center;
+}
+
+.b {
+    grid-column: col 4 / span 2;
+    grid-row: row;
+    display: flex;
+    justify-content: center;
+}
+
+.c {
+    grid-column: col 1 / span 5;
+    grid-row: row 2;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(red, white, purple);
+}
+
+.d {
+    grid-column: col 1 / span 2;
+    grid-row: row 3;
+    display: flex;
+    justify-content: center;
+}
+
+.e {
+    grid-column: col 4/ span 2;
+    grid-row: row 3;
+    display: flex;
+    justify-content: center;
+}
+
+.f {
+    grid-column: col 2 / span 3;
+    grid-row: row 2;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(49, 121, 207, 0.5);
+    z-index: 20;
+    background-image: linear-gradient(purple, white, red);
+}
